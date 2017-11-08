@@ -1,0 +1,20 @@
+#BJI folder was a code reference folder
+
+#PMBI folder was'nt processed
+
+#while processing data seismograms, there was two main folder each station folders
+1. OBSPY_PLOT folder for seismogram observasi
+2. SYNTHETIC folder for seismogram sintetik
+
+and the others file you can ignore.
+
+
+1. OBSPY_PLOT folder only convert the raw seismogram sintetik to MSEED. Untuk lebih jauh, baca README file yang ada pada SYNTHETIC folder karena fungsi-fungsi programnya adalah sama.
+
+2. SYNTHETIC folder
+akan dibahas lebih detail pada README file yang terdapat di folder ini
+
+
+#info seismogram
+Seismogram sintetik dengan periode dominan 5s dan lama rekaman 1200s
+Seismogram observasi dengan lama rekaman 1000s

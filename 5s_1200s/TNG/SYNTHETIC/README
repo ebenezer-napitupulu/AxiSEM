@@ -1,0 +1,56 @@
+Read this file before running codes!
+
+#-----------------------extracting raw data of synthetic seismogram---------
+
+1. synthetic.py 
+Program ini membaca waktu dan displacement dari raw data seismogram
+sintetik dan menuliskannya ke dalam file baru. 
+Ekstraksi waktu dan displacement dilakukan secara terpisah
+
+
+
+#---------------------------generating x-axis------------------
+
+Jika anda mau mengubah lama waktu seismogram sintetik maka lakukan tahap ini
+Lama waktu seismogram sintetik disesuaikan dengan lama waktu seismogram observasi
+
+2. time.py
+Program ini akan menghasilkan data x-axis yang intervalnya sesuai dengan delta
+waktu seismogram sintetik.
+x-axis akan dimulai dari 0 dan akan berakhir sebanyak data yang ada pada
+data sintetik
+
+3.time2minute.py
+Program ini akan mengkonversi x-axis dari satuan detik ke satuan detik, menit, dan jam
+yang sesuai dengan format TSPAIR.
+Sesuaikan nilai variabel paling besar sesuai dengan lama waktu seismogram observasi
+
+
+#----------------------------concatenate-------------------------
+
+Untuk membuat suatu format data TSPAIR yang nantinya dapat dikonversi ke MSEED
+maka jalankan program ini
+
+4. concatenate.py
+Program ini akan menggabungkan x-axis dan displacement yang sudah sesuai dengan
+format TSPAIR yang nantinya akan bisa dikonversi ke MSEED
+
+
+#-------------------------converting TSPAIR to MSEED------------------------------- 
+
+#run in terminal
+    
+    $ascii2mseed nama_file.ascii -o nama_file.mseed
+
+#then check the disk usage for the file.MSEED
+#with run this code 'du -sh file.MSEED' without quotes
+
+#-----------------------------read data (plotting)----------------------------------
+
+Program ini termasuk dalam hal filtering seismogram observasi dan diferensial seismogram sintetik
+Juga export figure into a new file
+
+5. read_data.py
+
+
+#-----------------------------------end-------------------------------------
